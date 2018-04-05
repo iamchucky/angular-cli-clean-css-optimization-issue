@@ -1,0 +1,17 @@
+@mixin italic() {
+    font-style: italic;
+}
+
+@mixin style-set($key: 'default', $border-type: 'none', $border-width: 'none') {
+    border-color: red;
+    background-color: black;
+    color: white;
+
+    @if ($border-width != 'none') {
+        border-width: $border-width;
+    }
+
+    @if ($border-type != 'none') {
+        border-style: $border-type;
+    }
+}
